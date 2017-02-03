@@ -13,11 +13,13 @@ namespace pepethegame
 	{
 		GraphicsDeviceManager graphics;
 		SpriteBatch spriteBatch;
-
+		private Texture2D Backlane;
+		private Texture2D Monster;
 		public Game1()
 		{
 			graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = "Content";
+
 		}
 
 		/// <summary>
@@ -41,7 +43,8 @@ namespace pepethegame
 		{
 			// Create a new SpriteBatch, which can be used to draw textures.
 			spriteBatch = new SpriteBatch(GraphicsDevice);
-
+			Backlane = Content.Load<Texture2D>("Sprites/instant_dungeon_artpack/By Scott Matott/WallTemplate-3and4-color");
+			Monster = Content.Load<Texture2D>("Sprites/instant_dungeon_artpack/By Scott Matott/monsters");
 			//TODO: use this.Content to load your game content here 
 		}
 
@@ -71,7 +74,10 @@ namespace pepethegame
 		protected override void Draw(GameTime gameTime)
 		{
 			graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
-
+			spriteBatch.Begin();
+			spriteBatch.Draw(Backlane, new Vector2(200,200), Color.White);
+			spriteBatch.Draw(Monster, new Vector2(400,400), Color.White);
+			spriteBatch.End();
 			//TODO: Add your drawing code here
 
 			base.Draw(gameTime);
