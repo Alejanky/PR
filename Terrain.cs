@@ -6,6 +6,7 @@ namespace pepethegame
 {
 	public class Terrain
 	{
+		
 		public Texture2D terrain;
 		public Vector2 [] position;
 		public Rectangle[] boxes;
@@ -13,6 +14,7 @@ namespace pepethegame
 		private int totalFrames;
 		public int Rows;
 		public int Columns;
+
 		public Terrain(Vector2 [] x, ContentManager y)
 		{
 			terrain = y.Load<Texture2D>("Sprites/sculptor-galaxy134-1600");
@@ -28,12 +30,21 @@ namespace pepethegame
 		}
 		public void drawframe()
 		{
-			
+		//as	
 		}
 		public Vector2 hitdetected()
 		{
 
 			return new Vector2();
 		}
+
+
+
+
+
+
+
+
+
 	}
 }
