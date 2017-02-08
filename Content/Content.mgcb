@@ -13,7 +13,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/Players.png
+#begin Sprites/walking2.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -23,9 +23,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/Players.png
+/build:Sprites/walking2.png
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/RockyStoneWalls-no-center.png
+#begin Sprites/sculptor-galaxy134-1600.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,9 +35,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/RockyStoneWalls-no-center.png
+/build:Sprites/sculptor-galaxy134-1600.jpg
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/Wall-base-Normals.png
+#begin Sprites/WallSet.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -47,317 +47,47 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/Wall-base-Normals.png
+/build:Sprites/WallSet.png
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/WallTemplate-3and4-color.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/WallTemplate-3and4-color.png
+#begin soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/11. Mice on Venus.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/11. Mice on Venus.mp3
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/blue_dragon_and_iceblasts.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/blue_dragon_and_iceblasts.png
+#begin soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/12. Dry Hands.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/12. Dry Hands.mp3
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/deep_set_walls_unused_doors.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/deep_set_walls_unused_doors.png
+#begin soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/3. Subwoofer Lullaby.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/3. Subwoofer Lullaby.mp3
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/dracolich.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/dracolich.png
+#begin soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/5. Living Mice.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/5. Living Mice.mp3
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/fireball.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/fireball.png
+#begin soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/6. Moog City.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/6. Moog City.mp3
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/graphpaper.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/graphpaper.png
+#begin soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/7. Haggstrom.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/7. Haggstrom.mp3
 
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/hedge_maze.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/hedge_maze.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/hourglass.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/hourglass.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/ice_bricks.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/ice_bricks.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/lightblue_bricks.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/lightblue_bricks.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/monsters.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/monsters.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/player-helmets.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/player-helmets.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/player_talk.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/player_talk.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/pumpkin_master_and_bomb.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/pumpkin_master_and_bomb.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/purple_bricks.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/purple_bricks.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/small-icons.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/small-icons.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/stone_bricks.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/stone_bricks.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/stone_giant_and_rolling_stone.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/stone_giant_and_rolling_stone.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/stone_walls.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/stone_walls.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/torch_key_gems.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/torch_key_gems.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/ui.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/ui.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/weapons_spells_torch_key_gems.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/weapons_spells_torch_key_gems.png
-
-#begin Sprites/instant_dungeon_artpack/By Scott Matott/wizard_lightning_poof.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Scott Matott/wizard_lightning_poof.png
-
-#begin Sprites/instant_dungeon_artpack/By Voytek Falendysz/dragon.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Voytek Falendysz/dragon.png
-
-#begin Sprites/instant_dungeon_artpack/By Voytek Falendysz/shield_knife_and_scrolls.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Voytek Falendysz/shield_knife_and_scrolls.png
-
-#begin Sprites/instant_dungeon_artpack/By Voytek Falendysz/zombie.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/instant_dungeon_artpack/By Voytek Falendysz/zombie.png
+#begin soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/8. Minecraft.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/8. Minecraft.mp3
 

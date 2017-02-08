@@ -1,85 +1,89 @@
 ﻿using System;
-
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace pepethegame
 {
-	/// <summary>
-	/// This is the main type for your game.
-	/// </summary>
+	
 	public class Game1 : Game
 	{
 		GraphicsDeviceManager graphics;
+		GraphicsDevice graphicsDevice;
 		SpriteBatch spriteBatch;
-		private Texture2D Backlane;
-		private Texture2D Monster;
+		PresentationParameters parameters;
+
+		private Snakeplayer player1;
+		private Snakeplayer player2;
+		private Texture2D background;
+		private Song Background;
 		public Game1()
 		{
 			graphics = new GraphicsDeviceManager(this);
 			Content.RootDirectory = "Content";
-
+			IsFixedTimeStep = true;
+			TargetElapsedTime = TimeSpan.FromMilliseconds(30);
+			parameters = new PresentationParameters();
+			graphicsDevice = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.Reach, parameters);
+			graphics.PreferredBackBufferWidth = graphicsDevice.DisplayMode.Width;
+			graphics.PreferredBackBufferHeight = graphicsDevice.DisplayMode.Height;
+			graphics.ApplyChanges();
 		}
 
-		/// <summary>
-		/// Allows the game to perform any initialization it needs to before starting to run.
-		/// This is where it can query for any required services and load any non-graphic
-		/// related content.  Calling base.Initialize will enumerate through any components
-		/// and initialize them as well.
-		/// </summary>
 		protected override void Initialize()
 		{
-			// TODO: Add your initialization logic here
-
+			player1 = new Snakeplayer(new Vector2(0,0),Content,"Sprites/walking2");
+			player2 = new Snakeplayer(new Vector2 (110,110),Content,"Sprites/walking2");
 			base.Initialize();
 		}
 
-		/// <summary>
-		/// LoadContent will be called once per game and is the place to load
-		/// all of your content.
-		/// </summary>
 		protected override void LoadContent()
 		{
-			// Create a new SpriteBatch, which can be used to draw textures.
+			
 			spriteBatch = new SpriteBatch(GraphicsDevice);
-			Backlane = Content.Load<Texture2D>("Sprites/instant_dungeon_artpack/By Scott Matott/WallTemplate-3and4-color");
-			Monster = Content.Load<Texture2D>("Sprites/instant_dungeon_artpack/By Scott Matott/monsters");
-			//TODO: use this.Content to load your game content here 
+			Background = Content.Load<Song>("soundeffects/C418 - Minecraft (Volumes Alpha & Beta) (2011 - 2013) {320}/Alpha/12. Dry Hands");
+			MediaPlayer.Play(Background); 
+			MediaPlayer.IsRepeating = true;
+			background = Content.Load<Texture2D>("Sprites/sculptor-galaxy134-1600");
+
 		}
 
-		/// <summary>
-		/// Allows the game to run logic such as updating the world,
-		/// checking for collisions, gathering input, and playing audio.
-		/// </summary>
-		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Update(GameTime gameTime)
 		{
-			// For Mobile devices, this logic will close the Game when the Back button is pressed
-			// Exit() is obsolete on iOS
-#if !__IOS__ && !__TVOS__
-			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+			#if !__IOS__ && !__TVOS__
+				if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
 				Exit();
 #endif
+			if(player1.life)
+			{
+				player1.updatelogic(graphicsDevice.DisplayMode.Width, graphicsDevice.DisplayMode.Height,gameTime);
+				player2.updatelogic(graphicsDevice.DisplayMode.Width, graphicsDevice.DisplayMode.Height, gameTime);
+			}
+			else
+			{
+				Exit();
+			}
 
-			// TODO: Add your update logic here
 
 			base.Update(gameTime);
 		}
 
-		/// <summary>
-		/// This is called when the game should draw itself.
-		/// </summary>
-		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Draw(GameTime gameTime)
 		{
-			graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+			
+			graphics.GraphicsDevice.Clear(Color.Black);
+			float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
+			Console.WriteLine(frameRate);
 			spriteBatch.Begin();
-			spriteBatch.Draw(Backlane, new Vector2(200,200), Color.White);
-			spriteBatch.Draw(Monster, new Vector2(400,400), Color.White);
+			spriteBatch.Draw(background, new Rectangle(0, 0, graphicsDevice.DisplayMode.Width, graphicsDevice.DisplayMode.Height), Color.White);
+			player1.draw(spriteBatch);
+			player2.draw(spriteBatch);
 			spriteBatch.End();
-			//TODO: Add your drawing code here
-
 			base.Draw(gameTime);
 		}
 	}
