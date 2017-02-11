@@ -9,7 +9,7 @@ namespace pepethegame
 	public class Snakeplayer
 	{
 		public Rectangle enemy { get; set;}
-		public Boolean life;
+
 		private int currentFrame;
 		private int totalFrames;
 		public Vector2 Position;
@@ -30,9 +30,10 @@ namespace pepethegame
 		public KeyboardState newState;
 		public Rectangle destinationRectangle;
 		public int state;
+		public int life;
 		public Snakeplayer(Vector2 x, ContentManager y)
-		{
-			life = true;
+		{//SOYALEJANKY Y ETOY BIEN PENDEJO
+			life = 70;
 			Position = x;
 			idle = y.Load<Texture2D>("Sprites/idle");
 			run = y.Load<Texture2D>("Sprites/Run");
@@ -43,7 +44,7 @@ namespace pepethegame
 			Rows = 3;
 			Columns = 3;
 			totalFrames = 9;
-			Veloctiy = new Vector2(0, 0.2939f);
+			Veloctiy = new Vector2(0, 0.5939f);
 			permiso = false;
 
 		}
@@ -157,7 +158,10 @@ namespace pepethegame
 		}
 		public void alive(Rectangle x)
 		{
-			life = !(destinationRectangle.Intersects(x));
+			if ((destinationRectangle.Intersects(x)))
+			{
+				life--;
+			}
 		}
 		private void Updateframe()
 		{
@@ -200,7 +204,7 @@ namespace pepethegame
 						{
  							if ( Position.X > 64)
 							{
-								Position.X -= 0.2939f * w.ElapsedGameTime.Milliseconds;
+								Position.X -= 0.5939f * w.ElapsedGameTime.Milliseconds;
 								if (this.hitcollision(x, w, a))
 								{
 									Position += Veloctiy * w.ElapsedGameTime.Milliseconds; 
@@ -217,9 +221,9 @@ namespace pepethegame
 						break;
 					case 3:
 						{
-							if (Position.X < 1152)
+							if (Position.X < 900)
 							{
-								Position.X += 0.2939f * w.ElapsedGameTime.Milliseconds;
+								Position.X += 0.5939f * w.ElapsedGameTime.Milliseconds;
 								if (this.hitcollision(x, w, a) )
 								{
 									Position += Veloctiy * w.ElapsedGameTime.Milliseconds; 
@@ -238,7 +242,7 @@ namespace pepethegame
 						{
 							if (newState.IsKeyUp(Keys.Up)&&this.hitcollision(x, w, a))
 							{
-								Position += (Veloctiy * w.ElapsedGameTime.Milliseconds);
+								Position += 2*(Veloctiy * w.ElapsedGameTime.Milliseconds);
 							}
 							else
 							{
@@ -254,14 +258,14 @@ namespace pepethegame
        						Position += -(Veloctiy * w.ElapsedGameTime.Milliseconds);
 							if (Position.X>64)
 							{
-								Position.X -= 0.2939f * w.ElapsedGameTime.Milliseconds;
+								Position.X -= 0.5939f * w.ElapsedGameTime.Milliseconds;
 							}
 	
 						}
 
 						else{if (Position.X > 64)
 							{
-								Position.X -= 0.2939f * w.ElapsedGameTime.Milliseconds;
+								Position.X -= 0.5939f * w.ElapsedGameTime.Milliseconds;
 							}}
 						{
 							 
@@ -273,18 +277,18 @@ namespace pepethegame
 								if (Position.Y > 64)
 							{
 								Position += -(Veloctiy * w.ElapsedGameTime.Milliseconds);
-								if (Position.X < 1152)
+								if (Position.X < 900)
 								{
-									Position.X += 0.2939f * w.ElapsedGameTime.Milliseconds;
+									Position.X += 0.5939f * w.ElapsedGameTime.Milliseconds;
 								}
 
 							}
 
 							else
 							{
-								if (Position.X < 1152)
+								if (Position.X < 900)
 								{
-									Position.X += 0.2939f * w.ElapsedGameTime.Milliseconds;
+									Position.X += 0.5939f * w.ElapsedGameTime.Milliseconds;
 								}
 							}
 							{
@@ -299,14 +303,14 @@ namespace pepethegame
 							Position += Veloctiy * w.ElapsedGameTime.Milliseconds;
 							if (Position.X > 64)
 							{
-								Position.X -= 0.2939f * w.ElapsedGameTime.Milliseconds;
+								Position.X -= 0.5939f * w.ElapsedGameTime.Milliseconds;
 							}
 						}
 						else
 						{
 							if (Position.X > 64)
 							{
-								Position.X -= 0.2939f * w.ElapsedGameTime.Milliseconds;
+								Position.X -= 0.5939f * w.ElapsedGameTime.Milliseconds;
 							}
 
 						}
@@ -318,16 +322,16 @@ namespace pepethegame
 							if (this.hitcollision(x, w, a))
 						{
 							Position += Veloctiy * w.ElapsedGameTime.Milliseconds;
-							if (Position.X < 1152)
+							if (Position.X < 900)
 							{
-								Position.X += 0.2939f * w.ElapsedGameTime.Milliseconds;
+								Position.X += 0.5939f * w.ElapsedGameTime.Milliseconds;
 							}
 						}
 						else
 						{
-							if (Position.X < 1152)
+							if (Position.X < 900)
 							{
-								Position.X += 0.2939f * w.ElapsedGameTime.Milliseconds;
+								Position.X += 0.5939f * w.ElapsedGameTime.Milliseconds;
 							}
 
 						}
@@ -351,21 +355,21 @@ namespace pepethegame
 					break;
 				case 2:
 					{
-						copia.X -= Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
-						copia.Y += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
+						copia.X -= Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
+						copia.Y += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
 					}
 					break;
 				case 3:
 					{
-						copia.X += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
-						copia.Y += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
+						copia.X += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
+						copia.Y += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
 					}
 					break;
 				case 4:
 					{
 						if (newState.IsKeyUp(Keys.Up))
 						{
-							copia.Y += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
+							copia.Y += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
 						}
 						else
 						{
@@ -376,26 +380,26 @@ namespace pepethegame
 					break;
 				case 5:
 					{
-						copia.X -= Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
-						copia.Y += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
+						copia.X -= Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
+						copia.Y += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
 					}
 					break;
 				case 6:
 					{
-						copia.X += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
-						copia.Y -= Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
+						copia.X += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
+						copia.Y -= Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
 					}
 					break;
 				case 7:
 					{
-						copia.X -= Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
-						copia.Y += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
+						copia.X -= Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
+						copia.Y += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
 					}
 					break;
 				case 8:
 					{
-						copia.X += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
-						copia.Y += Convert.ToInt32(0.2939f * w.ElapsedGameTime.Milliseconds);
+						copia.X += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
+						copia.Y += Convert.ToInt32(0.5939f * w.ElapsedGameTime.Milliseconds);
 					}
 					break;
 			}

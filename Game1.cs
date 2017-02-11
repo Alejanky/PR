@@ -25,6 +25,7 @@ namespace pepethegame
 		private Terrain blocks3;
 		private Terrain blocks4;
 		private Song Background;
+		private SpriteFont font;
 		public Game1()
 		{
 			graphics = new GraphicsDeviceManager(this);
@@ -33,15 +34,15 @@ namespace pepethegame
 			TargetElapsedTime = TimeSpan.FromMilliseconds(30);
 			parameters = new PresentationParameters();
 			graphicsDevice = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.Reach, parameters);
-			graphics.PreferredBackBufferWidth = 1280;
-			graphics.PreferredBackBufferHeight = 720;
+			graphics.PreferredBackBufferWidth = 1024;
+			graphics.PreferredBackBufferHeight = 768;
 			graphics.ApplyChanges();
 		}
 
 		protected override void Initialize()
 		{
-			player1 = new Snakeplayer(new Vector2(200,200),Content);
-			player2 = new Snakeplayer2(new Vector2 (300,200),Content);
+			player1 = new Snakeplayer(new Vector2(100,300),Content);
+			player2 = new Snakeplayer2(new Vector2 (800,300),Content);
 			player1.enemy = player2.destinationRectangle;
 			Vector2 [] izquierda;
 			izquierda = new Vector2[10];
@@ -58,7 +59,7 @@ namespace pepethegame
 			int b = 0;
 			for (int i = 0; i < 10; i++)
 			{
-				derecha[i] = new Vector2(1216, b);
+				derecha[i] = new Vector2(960, b);
 				b += 128;
 			}
 			blocks2 = new Terrain(derecha, Content, "Sprites/Tile (4)");
@@ -94,6 +95,7 @@ namespace pepethegame
 			MediaPlayer.Play(Background); 
 			MediaPlayer.IsRepeating = true;
 			background = Content.Load<Texture2D>("Sprites/BG");
+			font = Content.Load<SpriteFont>("font1/hola");
 		}
 
 		protected override void Update(GameTime gameTime)
@@ -102,17 +104,15 @@ namespace pepethegame
 				if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
 				Exit();
 			#endif
-			if(player1.life  && player2.life)
+			if(player1.life >0  && player2.life>0)
 			{
-				
 					player1.updatelogic(gameTime, new Rectangle(0,656,1280,64));
 					player2.updatelogic(gameTime, new Rectangle(0, 656, 1280, 64));
 					player2.shoot(Keys.Space);
 					player1.shoot(Keys.RightControl);
 				try
 				{
-					player2.alive(player1.bullets());
-
+					player2.alive(player1.bullets());		
 				}
 				catch (Exception ex)
 				{
@@ -127,11 +127,10 @@ namespace pepethegame
 				{
 
 				}
-
 			}
 			else
 			{
-				Exit();
+				//WEY QUE VERGA HACES AQUI NO MAMES				
 			}
 
 				
@@ -142,8 +141,6 @@ namespace pepethegame
 		{
 			
 			graphics.GraphicsDevice.Clear(Color.Black);
-			float frameRate = 1 / (float)gameTime.ElapsedGameTime.TotalSeconds;
-			Console.WriteLine(frameRate);
 			spriteBatch.Begin();
 			spriteBatch.Draw(background, new Rectangle(0, 0, graphicsDevice.DisplayMode.Width, graphicsDevice.DisplayMode.Height), Color.White);
 			blocks.drawframe(spriteBatch);
@@ -152,6 +149,9 @@ namespace pepethegame
 			blocks4.drawframe(spriteBatch);
 			player1.draw(spriteBatch);
 			player2.draw(spriteBatch);
+			spriteBatch.DrawString(font,"Personaje 1: "+ player1.life, new Vector2(100,100),Color.White);
+			spriteBatch.DrawString(font,"Personaje 2: "+ player2.life, new Vector2(700,100),Color.Black);
+			spriteBatch.DrawString(font, "FIGHTO DESU",new Vector2(400,600),Color.Pink);
 			spriteBatch.End();
 			base.Draw(gameTime);
 		}

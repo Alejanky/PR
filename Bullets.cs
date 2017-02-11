@@ -13,7 +13,7 @@ namespace pepethegame
 		public bool sigue;
 		public Bullets(Vector2 x)
 		{
-			spriteposition = x + new Vector2(50,50);
+			spriteposition = x + new Vector2(100,100);
 			sigue = true;
 		}
 
