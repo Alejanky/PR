@@ -172,7 +172,7 @@ namespace pepethegame
 			Rectangle sourceRectangle = new Rectangle(width * column, height * row, width, height);
 			destinationRectangle = new Rectangle((int)Position.X, (int)Position.Y, width / 4, height / 4);
 
-			a.Draw(body, destinationRectangle, sourceRectangle, Color.Black);
+			a.Draw(body, destinationRectangle, sourceRectangle,Color.Aqua);
 			this.Updateframe();
 		}
 

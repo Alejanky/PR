@@ -151,7 +151,7 @@ namespace pepethegame
 			player2.draw(spriteBatch);
 			spriteBatch.DrawString(font,"Personaje 1: "+ player1.life, new Vector2(100,100),Color.White);
 			spriteBatch.DrawString(font,"Personaje 2: "+ player2.life, new Vector2(700,100),Color.Black);
-			spriteBatch.DrawString(font, "FIGHTO DESU",new Vector2(400,600),Color.Pink);
+		
 			spriteBatch.End();
 			base.Draw(gameTime);
 		}
